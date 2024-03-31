@@ -799,7 +799,7 @@ export default function Home() {
         setpen([...pen, row].sort(sorting));
       } else if (stat == 1) {
         setdep(arr.sort(sorting));
-        setpro(arr.sort(sorting));
+        setpro([...pro, row].sort(sorting));
       } else if (stat == 2) {
         setdep(arr.sort(sorting));
         setcom([...com, row].sort(sorting));
@@ -821,7 +821,7 @@ export default function Home() {
         setpen([...pen, row].sort(sorting));
       } else if (stat == 1) {
         setdef(arr.sort(sorting));
-        setpro(arr.sort(sorting));
+        setpro([...pro, row].sort(sorting));
       } else if (stat == 2) {
         setdef(arr.sort(sorting));
         setcom([...com, row].sort(sorting));
