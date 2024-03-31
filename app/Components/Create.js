@@ -99,7 +99,7 @@ const Create = ({ crestate, crefunc ,crud}) => {
             onClick={() => {
               if(Title !== "" && Description !== "" && Team !== "" && Assignee !== ""){ 
                 
-                  crud(Title,Description,Team,Assignee,Priority,0,`2024-03-02`,"")
+                  crud(Title,Description,Team,Assignee,Priority,0,`${year}-${month}-${date}`,"")
   
                   setTitle("")
                   setDescription("")
