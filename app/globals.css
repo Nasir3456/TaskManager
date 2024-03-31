@@ -1,0 +1,657 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  background-image: linear-gradient(to bottom right,#e3bbeb,rgba(5, 174, 180, 0.37));
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+  
+}
+
+.main > h1 {
+  color: #fff;
+  position: absolute;
+  top: 1%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 3rem;
+  white-space: nowrap;
+  align-self: flex-start;
+}
+
+.main > .container {
+  position: relative;
+  top: 9%;
+  left: 2.5%;
+  height: 90%;
+  width: 95%;
+  border: 5px solid white;
+  border-radius: 2rem;
+  padding: 1rem;
+}
+
+/* this is top container css  */
+
+.btns{
+  position: absolute;
+  right: 0;
+  top: 4rem;
+}
+
+.btn{
+  font-size: 1.2vw;
+  padding: .5rem 1.5rem;
+  color: white;
+  font-weight: 700;
+  border: 1px solid transparent;
+  outline: none;
+  background-color: #763485;
+  border-radius: .5rem;
+  margin-right: 2rem;
+  transition: all .3s;
+  cursor: pointer;
+}
+
+.btn:hover{
+  background-color: transparent;
+  border: 1px solid #763485;
+  color: #763485;
+}
+
+.main > .container > .top {
+  display: flex;
+  gap: 1vh;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.main > .container > .top > label {
+  display: flex;
+  gap: 2vw;
+  align-items: center;
+
+}
+
+.main > .container > .top > label>div{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.main > .container > .top > label >div> h2 {
+  font-size: 2rem;
+  width: 10rem;
+  text-align: right;
+  color: #763485;
+}
+
+
+.main > .container > .top > label > div> input {
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  height: 2rem;
+  font-size: 1rem;
+  padding: 0 2rem;
+  box-shadow: inset -1px -1px 3px gray, inset 1px 1px 3px gray;
+}
+
+.main > .container > .top > label > div> select {
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  height: 2rem;
+  padding: 0 2rem;
+  font-size: 1rem;
+  box-shadow: inset -1px -1px 3px gray, inset 1px 1px 3px gray;
+}
+
+/* this is bottom container css   */
+
+.main > .container > .bottom {
+  height: 63vh;
+}
+
+.main > .container > .bottom > .cards {
+  height: 100%;
+  width: 100%;
+  overflow-x: scroll;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 1vw;
+}
+
+/* this is card css  */
+
+.main > .container > .bottom > .cards > .card {
+  width: 18%;
+  height: 90%;
+  background-color: rgba(168, 144, 144, 0.192);
+  border-radius: 20px;
+  position: relative;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  box-shadow: inset -1px -1px 3px white, inset 1px 1px 3px white;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.main > .container > .bottom > .cards > .card > .head {
+  height: 7vh;
+  width: 100%;
+  position: sticky;
+  z-index: 10;
+  top: 0;
+  border-radius: 20px 20px 0 0;
+  border-bottom: 2px solid white;
+  text-align: center;
+  line-height: 7vh;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.7rem;
+}
+
+.main > .container > .bottom > .cards > .card:nth-child(1) > .head {
+  background-color: rgb(153, 152, 152);
+}
+.main > .container > .bottom > .cards > .card:nth-child(2) > .head {
+  background-color: rgb(247, 173, 36);
+}
+.main > .container > .bottom > .cards > .card:nth-child(3) > .head {
+  background-color: rgb(3, 182, 3);
+}
+.main > .container > .bottom > .cards > .card:nth-child(4) > .head {
+  background-color: rgb(7, 7, 133);
+}
+.main > .container > .bottom > .cards > .card:nth-child(5) > .head {
+  background-color: rgb(218, 89, 110);
+}
+
+
+
+
+.main > .container > .bottom > .cards > .card > .task {
+  width: 95%;
+  margin-left: 2.5%;
+  background-color: #f1f0f0ab;
+  margin-top: 1vh;
+  border-radius: 8px;
+  position: relative;
+  padding: 0 2px;
+}
+
+/* this is task js file  */
+
+
+
+.main > .container > .bottom > .cards > .card > .task > .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px 10px;
+  border-bottom: 1px solid gray;
+}
+
+.main > .container > .bottom > .cards > .card > .task > .title > p {
+  height: 1.5rem;
+  width: 1.5rem;
+  color: white;
+  background-color: rgb(0, 0, 184);
+  border-radius: 2px;
+  text-align: center;
+}
+
+.main > .container > .bottom > .cards > .card > .task > .desc {
+  margin-bottom: 10px;
+}
+
+.main > .container > .bottom > .cards > .card > .task > .assign {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+
+.main > .container > .bottom > .cards > .card > .task > .assign > h3:hover {
+  cursor: pointer;
+}
+
+
+.main > .container > .bottom > .cards > .card > .task > button {
+  margin-bottom: 10px;
+  margin-left: 5px;
+  padding: 5px 20px;
+  outline: none;
+  cursor: pointer;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 50px;
+  background-color: rgb(0, 0, 184);
+}
+
+.main > .container > .bottom > .cards > .card > .task > button:hover {
+  background-color: rgb(0, 0, 117);
+}
+
+.main > .container > .bottom > .cards > .card > .task > .drop-down{
+  position: absolute;
+  right: 0%;
+  z-index: 12;
+  bottom: -15%;
+  background-color: #763485;
+  color: white;
+  transition: all .3s;
+}
+
+.main > .container > .bottom > .cards > .card > .task > .drop-down > h2{
+  text-align: center;
+  padding: .5rem 1.5rem;
+  font-size: 1rem;
+}
+
+.main > .container > .bottom > .cards > .card > .task > .drop-down > .update{
+  border-bottom: 1px solid white;
+  background-color: rgb(37, 153, 37);
+}
+.main > .container > .bottom > .cards > .card > .task > .drop-down > .delete{
+
+  background-color: rgb(240, 32, 32);
+}
+
+.main > .container > .bottom > .cards > .card > .task > .drop-down > h2:hover{
+  cursor: pointer;
+  background-color: #000;
+}
+
+/* this is create task button  */
+
+.main > .container > button {
+  font-size: 1.5rem;
+  padding: 0.3rem 3rem;
+  position: absolute;
+  left: 50%;
+  bottom:1rem;
+  transform: translateX(-50%);
+  outline: none;
+  border: none;
+  white-space: nowrap;
+  background-color: #763485;
+  color: white;
+  border-radius: 50px;
+  transition: all 0.3s;
+}
+
+.main > .container > button:hover {
+  cursor: pointer;
+  background-color: #4e3453;
+}
+
+
+/* this is delete box css  */
+
+.main>.center-div{
+  position: absolute;
+  background-image: linear-gradient(to bottom right,#e3bbeb,rgba(5, 174, 180, 1));
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 100;
+}
+
+.main >.center-div>.del-box{
+  /* height: 50vh; */
+  width: 25rem;
+}
+
+.main>.center-div>.del-box>.top{
+  height: 4rem;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+.main>.center-div>.del-box>.top>.cancel{
+  cursor: pointer;
+}
+
+.main>.center-div>.del-box>.bottom>p{
+  margin: 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 3rem;
+}
+
+.main>.center-div>.del-box>.bottom>.lower{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  transition: all .3s;
+  margin: 1rem;
+}
+
+.main>.center-div>.del-box>.bottom>.lower>h3{
+  width: 60%;
+  overflow-wrap: break-word;
+  font-weight: 700;
+  font-size: 1rem;
+  text-wrap: wrap;
+  padding:0 1rem;
+
+}
+.main>.center-div>.del-box>.bottom>.lower>button{
+  border: none;
+  outline: none;
+  padding: .5rem 1.5vw;
+  font-size: 1.1rem;
+  text-align: center;
+  color: white;
+  font-weight: 600;
+  border-radius: 10px;
+  background-color: rgb(4, 4, 150);
+}
+.main>.center-div>.del-box>.bottom>.lower>button:hover{
+  background-color: rgb(9, 9, 87);
+  cursor: pointer;
+}
+
+/* this is edit box css */
+
+.main >.center-div>.up-box{
+  width: 30rem;
+}
+
+.main>.center-div>.up-box>.top{
+  height: 4rem;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+.main>.center-div>.up-box>.top>.cancel{
+  cursor: pointer;
+}
+.main>.center-div>.up-box>.bottom{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+.main>.center-div>.up-box>.bottom>.row{
+  width: 90%;
+  margin-top: 1rem;
+  overflow-wrap: break-word;
+}
+.main>.center-div>.up-box>.bottom>.row>h5{
+  padding: 7px;
+  background-color: rgb(170, 166, 166,.3);
+  border-radius: 10px;
+  font-size: 1rem;
+  border: 1px solid gray;
+}
+
+.main > .center-div>.up-box>.bottom>.row> select {
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  height: 2rem;
+  padding: 0 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: inset -1px -1px 3px gray, inset 1px 1px 3px gray;
+}
+
+.main>.center-div>.up-box>.lower{
+  display: flex;
+  justify-content: space-around;
+  transition: all .3s;
+  background-color: white;
+}
+
+.main>.center-div>.up-box>.lower>button{
+  border: none;
+  outline: none;
+  padding: .5rem 1.5rem;
+  font-size: 1.1rem;
+  color: white;
+  font-weight: 600;
+  border-radius: 10px;
+  background-color: rgb(4, 4, 150);
+  margin:1rem 0;
+}
+.main>.center-div>.up-box>.lower>button:hover{
+  background-color: rgb(9, 9, 87);
+  cursor: pointer;
+}
+
+
+/* rhis is create box css  */
+
+
+
+.main >.center-div>.cre-box{
+  width: 35rem;
+}
+
+.main>.center-div>.cre-box>.top{
+  height: 4rem;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+.main>.center-div>.cre-box>.top>.cancel{
+  cursor: pointer;
+}
+.main>.center-div>.cre-box>.bottom{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+.main>.center-div>.cre-box>.bottom>.row{
+  width: 90%;
+  margin-top: 1rem;
+  display: flex;
+  overflow-wrap: break-word;
+}
+.main>.center-div>.cre-box>.bottom>.row>h2{
+  width: 35%;
+  text-align: right;
+  padding-right: .8rem;
+}
+.main>.center-div>.cre-box>.bottom>.row>input{
+  padding: 7px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+  width: 65%;
+  font-size: 1rem;
+  outline: none;
+  border: none;
+  border: 1px solid gray;
+}
+
+.main > .center-div>.cre-box>.bottom>.row> select {
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  height: 2rem;
+  padding: 0 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: inset -1px -1px 3px gray, inset 1px 1px 3px gray;
+}
+
+.main>.center-div>.cre-box>.lower{
+  display: flex;
+  justify-content: space-around;
+  transition: all .3s;
+  background-color: white;
+}
+
+.main>.center-div>.cre-box>.lower>button{
+  border: none;
+  outline: none;
+  padding: .5rem 1.5rem;
+  font-size: 1.1rem;
+  color: white;
+  font-weight: 600;
+  border-radius: 10px;
+  background-color: rgb(4, 4, 150);
+  margin:1rem 0;
+}
+.main>.center-div>.cre-box>.lower>button:hover{
+  background-color: rgb(9, 9, 87);
+  cursor: pointer;
+}
+
+
+/* this is resposive  */
+
+@media (max-width:1024px){
+  .main > .container > .bottom > .cards > .card{
+    width: 45vw;
+  }
+  .btns{
+    top: 7rem;
+  }
+}
+
+
+@media (max-width:786px){
+  .main > .container > .bottom > .cards > .card{
+    width: 65%;
+  }
+  .main > .container > .bottom > .cards{
+    gap: 1rem; 
+  }
+  .main > .container > .top > label >div> h2{
+    font-size: 2rem;
+    width: 10rem;
+  }
+  .main > .container > .top > label >div> input{
+    font-size: 1.2rem;
+    width: 50vw;
+  }
+  .main > .container > .top > label >div> select{
+    width: 30vw;
+    font-size: 1.2rem;
+  }
+  .main > .container > .top > label>div{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+  }
+  .main > .container > .bottom {
+    height: 50vh;
+  }
+  .main > .container > button {
+    font-size: 5vw;
+    padding:1vw 8vw;
+  }
+  .main >.center-div>.up-box{
+    width: 90vw;
+  }
+  .main >.center-div>.cre-box{
+    width: 90vw;
+  }
+  .main>.center-div>.cre-box>.bottom>.row>h2{
+    font-size: 1.2rem;
+  }
+  .btns{
+    position: inherit;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .btn{
+    margin: 0 1rem;
+    font-size: 1rem;
+  }
+}
+
+
+
+@media (max-width:450px) {
+  .main > .container > .bottom > .cards > .card{
+    width: 99%;
+  }
+  .main > .container > .bottom > .cards{
+    gap: 1rem; 
+  }
+  
+  .main > .container > .top > label >div> h2{
+    font-size: 1rem;
+    width: 5rem;
+  }
+  .main > .container > .top > label >div> input{
+    font-size: 1rem;
+    padding-left: 1rem;
+    width: 60vw;
+  }
+  .main > .container > .top > label >div> select{
+    width: 60vw;
+    padding-left: 1rem;
+    font-size: 1rem;
+  }
+  .main > .container > .top > label>div{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+  }
+  .main > .container > .bottom {
+    height: 50vh;
+  }
+  .main > .container > button {
+    font-size: 5vw;
+    padding:4vw 8vw;
+  }
+  .main >.center-div>.del-box{
+    height: 15rem;
+    width: 90vw;
+  }
+  .main >.center-div>.up-box{
+    width: 90vw;
+  }
+  .main > .center-div>.up-box>.bottom>.row> select {
+    padding: 0 .7rem;
+  }
+  .main>.center-div>.up-box>.bottom>.row>h5{
+    padding: 4px;
+    font-size: .8rem;
+  }
+  .main>.center-div>.up-box>.bottom>.row>h3{
+    font-size:.8rem;
+  }
+
+  .main >.center-div>.cre-box{
+    width: 90vw;
+  }
+  .main > .center-div>.cre-box>.bottom>.row> select {
+    padding: 0 .7rem;
+  }
+  .main>.center-div>.cre-box>.bottom>.row>input{
+    padding: 4px;
+    font-size: .8rem;
+  }
+  .main>.center-div>.cre-box>.bottom>.row>h2{
+    font-size: 4vw;
+  }
+}
